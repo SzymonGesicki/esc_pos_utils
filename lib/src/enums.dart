@@ -35,10 +35,12 @@ class PosTextSize {
 class PaperSize {
   const PaperSize._internal(this.value);
   final int value;
-  static const mm58 = PaperSize._internal(1);
-  static const mm80 = PaperSize._internal(2);
 
-  int get width => value == PaperSize.mm58.value ? 372 : 558;
+  static const mm58 = PaperSize._internal(372);
+  static const mm80 = PaperSize._internal(558);
+
+  factory PaperSize.custom(int value) => PaperSize._internal(value);
+  int get width => value;
 }
 
 class PosBeepDuration {

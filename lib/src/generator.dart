@@ -69,7 +69,7 @@ class Generator {
       data = data.replaceAll(element, "@");
     });
 
-    return Uint8List.fromList(Latin8Codec().encode(data));
+    return Uint8List.fromList(Latin8Codec(allowInvalid: true).encode(data));
   }
 
   List _getLexemes(String text) {

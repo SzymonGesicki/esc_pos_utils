@@ -66,7 +66,7 @@ class Generator {
   Uint8List _encode(String text, {bool isKanji = false}) {
     var data = text;
     notSupportedCharacters.forEach((element) {
-      data = data.replaceAll(element, "@");
+      data = data.replaceAll(String.fromCharCode(element.asci), element.replacteTo);
     });
 
     return Uint8List.fromList(Latin8Codec(allowInvalid: true).encode(data));

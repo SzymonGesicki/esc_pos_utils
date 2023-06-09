@@ -15,7 +15,7 @@ import 'commands.dart';
 import 'not_supported_characters.dart';
 
 class Generator {
-  Generator(this._paperSize, this._profile, {this.spaceBetweenRows = 5});
+  Generator(this._paperSize, this._profile, this._maxCharsPerLine, {this.spaceBetweenRows = 5});
 
   // Ticket config
   final PaperSize _paperSize;
